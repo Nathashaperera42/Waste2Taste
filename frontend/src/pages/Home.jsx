@@ -2,6 +2,7 @@ import React from 'react'
 import Mainbanner from '../componets/Mainbanner'
 import Categories from '../componets/Categories'
 import BestSeller from '../componets/BestSeller'
+import BottoBanner from '../componets/BottoBanner'
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
         <Mainbanner/>
         <Categories/>
        <BestSeller/>
+       <BottoBanner/>
     </div>
   )
 }

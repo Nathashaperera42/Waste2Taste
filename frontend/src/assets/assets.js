@@ -14,6 +14,7 @@ import beverage from "../assets/images/beverage.jpeg";
 import rice from "../assets/images/rice.jpeg";
 import cake from "../assets/images/cake.jpeg";
 import brekfast from "../assets/images/srilankabrekfast.jpeg"
+import bottombanner from "../assets/images/banner.png";
 
 export const assets={
     logo,
@@ -31,7 +32,8 @@ export const assets={
     rice,
     beverage,
     cake,
-    brekfast
+    brekfast,
+    bottombanner
 
 
 };
@@ -42,62 +44,62 @@ export const categories =[
         text:"Bakery",
         path:"bakeryproducts",
         image:"bakery",
-        bgcolor:"#FFF699",
+        bgcolor:"#40916C",
     },
      {
         text:"Burgures",
         path:"",
         image:"burgers",
-        bgcolor:"#FEC5E5",
+        bgcolor:"#40916C",
     },
      {
         text:"Pizza",
         path:"",
         image:"pizza",
-        bgcolor:"#f7f5ea",
+        bgcolor:"#40916C",
     },
      {
         text:"Sri lankan breakfast",
         path:"",
         image:"brekfast",
-        bgcolor:"#e5f2e1",
+        bgcolor:"#40916C",
     },
      {
         text:"Rice & curry",
         path:"",
         image:"rice",
-        bgcolor:"#f5e2c5",
+        bgcolor:"#40916C",
     },
      {
         text:"Beverages",
         path:"",
         image:"beverage",
-        bgcolor:"#d4c6ac",
+        bgcolor:"#40916C",
     },
      {
         text:"Vegetables & Fruits",
         path:"",
         image:"vegifruit",
-        bgcolor:"#dfbda1",
+        bgcolor:"#40916C",
     },
      {
         text:"Cakes",
         path:"",
         image:"cake",
-        bgcolor:"#c3b1e1",
+        bgcolor:"#40916C",
     },  {
         
         text:"Bakery",
         path:"bakeryproducts",
         image:"bakery",
-        bgcolor:"#89cff0",
+        bgcolor:"#40916C",
     },
       {
         
         text:"Bakery",
         path:"bakeryproducts",
         image:"bakery",
-        bgcolor:"#90EE90",
+        bgcolor:"#40916C",
     },
 ]
 export const dummyProducts =[
