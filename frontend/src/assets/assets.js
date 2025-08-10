@@ -7,6 +7,13 @@ import bakery from "../assets/images/bakery.jpeg";
 import star from "../assets/images/star.png";
 import stardull from "../assets/images/stardull.png";
 import cart from "../assets/images/shopping-cart.png";
+import pizza from "../assets/images/pizza.jpeg";
+import burgers from "../assets/images/burger.jpeg";
+import vegifruit from "../assets/images/vegifruit.jpeg";
+import beverage from "../assets/images/beverage.jpeg";
+import rice from "../assets/images/rice.jpeg";
+import cake from "../assets/images/cake.jpeg";
+import brekfast from "../assets/images/srilankabrekfast.jpeg"
 
 export const assets={
     logo,
@@ -18,6 +25,14 @@ export const assets={
     star,
     stardull,
     cart,
+    pizza,
+    burgers,
+    vegifruit,
+    rice,
+    beverage,
+    cake,
+    brekfast
+
 
 };
 
@@ -32,43 +47,43 @@ export const categories =[
      {
         text:"Burgures",
         path:"",
-        image:"bakery",
+        image:"burgers",
         bgcolor:"#FEC5E5",
     },
      {
         text:"Pizza",
         path:"",
-        image:"bakery",
+        image:"pizza",
         bgcolor:"#f7f5ea",
     },
      {
         text:"Sri lankan breakfast",
         path:"",
-        image:"bakery",
+        image:"brekfast",
         bgcolor:"#e5f2e1",
     },
      {
         text:"Rice & curry",
         path:"",
-        image:"bakery",
+        image:"rice",
         bgcolor:"#f5e2c5",
     },
      {
         text:"Beverages",
         path:"",
-        image:"bakery",
+        image:"beverage",
         bgcolor:"#d4c6ac",
     },
      {
         text:"Vegetables & Fruits",
         path:"",
-        image:"bakery",
+        image:"vegifruit",
         bgcolor:"#dfbda1",
     },
      {
         text:"Cakes",
         path:"",
-        image:"bakery",
+        image:"cake",
         bgcolor:"#c3b1e1",
     },  {
         
@@ -107,12 +122,12 @@ export const dummyProducts =[
     },
      {
         _id:"12345",
-        name:"caraven fresh",
-        category:"bakery",
+        name:"pizza",
+        category:"pizza",
         Quanty:"Suprise Bag",
         offerprice:"500",
         price:"1000",
-        image:[bakery],
+        image:[pizza],
         description:[
             "",
             "",
@@ -131,7 +146,7 @@ export const dummyProducts =[
         Quanty:"Suprise Bag",
         offerprice:"500",
         price:"1000",
-        image:[bakery],
+        image:[burgers],
         description:[
             "",
             "",
@@ -150,7 +165,7 @@ export const dummyProducts =[
         Quanty:"Suprise Bag",
         offerprice:"500",
         price:"1000",
-        image:[bakery],
+        image:[rice],
         description:[
             "",
             "",
