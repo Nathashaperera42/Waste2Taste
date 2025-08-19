@@ -15,6 +15,10 @@ import rice from "../assets/images/rice.jpeg";
 import cake from "../assets/images/cake.jpeg";
 import brekfast from "../assets/images/srilankabrekfast.jpeg"
 import bottombanner from "../assets/images/banner.png";
+import logotwo from "../assets/images/waste2taste.png";
+import { Links } from "react-router-dom";
+import loginimage from "../assets/images/loginimage.png";
+import deliveryman from "../assets/images/deliveryman.png";
 
 export const assets={
     logo,
@@ -33,7 +37,10 @@ export const assets={
     beverage,
     cake,
     brekfast,
-    bottombanner
+    bottombanner,
+    logotwo,
+    loginimage,
+    deliveryman
 
 
 };
@@ -42,70 +49,70 @@ export const categories =[
     {
         
         text:"Bakery",
-        path:"bakeryproducts",
+        path:"bakery",
         image:"bakery",
-        bgcolor:"#40916C",
+        bgcolor:"#c8e6c9",
     },
      {
         text:"Burgures",
-        path:"",
+        path:"burgers",
         image:"burgers",
-        bgcolor:"#40916C",
+        bgcolor:"#c8e6c9",
     },
      {
         text:"Pizza",
-        path:"",
+        path:"pizza",
         image:"pizza",
-        bgcolor:"#40916C",
+        bgcolor:"#c8e6c9",
     },
      {
         text:"Sri lankan breakfast",
-        path:"",
+        path:"slbreakfast",
         image:"brekfast",
-        bgcolor:"#40916C",
+        bgcolor:"#c8e6c9",
     },
      {
         text:"Rice & curry",
-        path:"",
+        path:"rice&curry",
         image:"rice",
-        bgcolor:"#40916C",
+        bgcolor:"#c8e6c9",
     },
      {
         text:"Beverages",
-        path:"",
+        path:"baverages",
         image:"beverage",
-        bgcolor:"#40916C",
+        bgcolor:"#c8e6c9",
     },
      {
         text:"Vegetables & Fruits",
-        path:"",
+        path:"vegie&fruit",
         image:"vegifruit",
-        bgcolor:"#40916C",
+        bgcolor:"#c8e6c9",
     },
      {
         text:"Cakes",
-        path:"",
+        path:"cakes",
         image:"cake",
-        bgcolor:"#40916C",
+        bgcolor:"#c8e6c9",
     },  {
         
-        text:"Bakery",
-        path:"bakeryproducts",
+        text:"Donuts",
+        path:"donuts",
         image:"bakery",
-        bgcolor:"#40916C",
+        bgcolor:"#c8e6c9",
     },
       {
         
-        text:"Bakery",
-        path:"bakeryproducts",
+        text:"Chineese",
+        path:"chineese",
         image:"bakery",
-        bgcolor:"#40916C",
+        bgcolor:"#c8e6c9",
     },
 ]
 export const dummyProducts =[
     {
-        _id:"12345",
-        name:"caraven fresh",
+        _id:"1",
+        name:"pizza",
         category:"bakery",
         Quanty:"Suprise Bag",
         offerprice:"500",
@@ -116,14 +123,14 @@ export const dummyProducts =[
             "",
             "",
         ],
-        city:"",
+        city:"madampe",
         collecttime:"",
         createdAt:"",
         updatedAt:"",
         inStock:true,
     },
      {
-        _id:"12345",
+        _id:"12",
         name:"pizza",
         category:"pizza",
         Quanty:"Suprise Bag",
@@ -135,14 +142,14 @@ export const dummyProducts =[
             "",
             "",
         ],
-        city:"",
+        city:"chilaw",
         collecttime:"",
         createdAt:"",
         updatedAt:"",
         inStock:true,
     },
      {
-        _id:"12345",
+        _id:"123",
         name:"caraven fresh",
         category:"bakery",
         Quanty:"Suprise Bag",
@@ -154,7 +161,45 @@ export const dummyProducts =[
             "",
             "",
         ],
-        city:"",
+        city:"wennappuwa",
+        collecttime:"",
+        createdAt:"",
+        updatedAt:"",
+        inStock:true,
+    },
+     {
+        _id:"1233",
+        name:"caraven fresh",
+        category:"bakery",
+        Quanty:"Suprise Bag",
+        offerprice:"500",
+        price:"1000",
+        image:[rice],
+        description:[
+            "",
+            "",
+            "",
+        ],
+        city:"kurunagala",
+        collecttime:"",
+        createdAt:"",
+        updatedAt:"",
+        inStock:true,
+    },
+     {
+        _id:"1234",
+        name:"caraven fresh",
+        category:"bakery",
+        Quanty:"Suprise Bag",
+        offerprice:"500",
+        price:"1000",
+        image:[rice],
+        description:[
+            "",
+            "",
+            "",
+        ],
+        city:"galle",
         collecttime:"",
         createdAt:"",
         updatedAt:"",
@@ -173,10 +218,177 @@ export const dummyProducts =[
             "",
             "",
         ],
+        city:"marawila",
+        collecttime:"",
+        createdAt:"",
+        updatedAt:"",
+        inStock:true,
+    },
+     {
+        _id:"123456",
+        name:"caraven fresh",
+        category:"bakery",
+        Quanty:"Suprise Bag",
+        offerprice:"500",
+        price:"1000",
+        image:[rice],
+        description:[
+            "",
+            "",
+            "",
+        ],
         city:"",
         collecttime:"",
         createdAt:"",
         updatedAt:"",
         inStock:true,
     },
+     {
+        _id:"123457",
+        name:"caraven fresh",
+        category:"bakery",
+        Quanty:"Suprise Bag",
+        offerprice:"500",
+        price:"1000",
+        image:[rice],
+        description:[
+            "",
+            "",
+            "",
+        ],
+        city:"",
+        collecttime:"",
+        createdAt:"",
+        updatedAt:"",
+        inStock:true,
+    },
+     {
+        _id:"123458",
+        name:"caraven fresh",
+        category:"bakery",
+        Quanty:"Suprise Bag",
+        offerprice:"500",
+        price:"1000",
+        image:[rice],
+        description:[
+            "",
+            "",
+            "",
+        ],
+        city:"",
+        collecttime:"",
+        createdAt:"",
+        updatedAt:"",
+        inStock:true,
+    },
+     {
+        _id:"123459",
+        name:"caraven fresh",
+        category:"bakery",
+        Quanty:"Suprise Bag",
+        offerprice:"500",
+        price:"1000",
+        image:[rice],
+        description:[
+            "",
+            "",
+            "",
+        ],
+        city:"",
+        collecttime:"",
+        createdAt:"",
+        updatedAt:"",
+        inStock:true,
+    },
+     {
+        _id:"123455",
+        name:"caraven fresh",
+        category:"bakery",
+        Quanty:"Suprise Bag",
+        offerprice:"500",
+        price:"1000",
+        image:[rice],
+        description:[
+            "",
+            "",
+            "",
+        ],
+        city:"",
+        collecttime:"",
+        createdAt:"",
+        updatedAt:"",
+        inStock:true,
+    },
+     {
+        _id:"12349",
+        name:"caraven fresh",
+        category:"bakery",
+        Quanty:"Suprise Bag",
+        offerprice:"500",
+        price:"1000",
+        image:[rice],
+        description:[
+            "",
+            "",
+            "",
+        ],
+        city:"",
+        collecttime:"",
+        createdAt:"",
+        updatedAt:"",
+        inStock:true,
+    },
+]
+
+export const footerLinks=[
+    {
+        title:"Quick Links",
+        Links:[
+            {text:"Home",url:"#"},
+            {text:"Best Sellers",url:"#"},
+            {text:"Offers & Deals",url:"#"},
+            {text:"Contact Us",url:"#"},
+            {text:"FAQs",url:"#"},
+        ],
+
+
+    },
+    {
+        title:"Need help?",
+        Links:[
+            {text:"Delivery Information",url:"#"},
+            {text:"Return & Refund Policy",url:"#"},
+            {text:"HPayment Methodsome",url:"#"},
+            {text:"Track your Order",url:"#"},
+            {text:"Contact Us",url:"#"}
+        ]
+
+    },
+    {
+        title:"Follow us",
+        Links:[
+            {text:"instegram",url:"#"},
+            {text:"twitter",url:"#"},
+            {text:"facebook",url:"#"},
+            {text:"youtube",url:"#"},
+        ]
+    }
+]
+
+export const dummyAddress=[
+    {
+    _id: "67b5b9e54ea97f71bbc196a0",
+    userId: "67b5880e4d09769c5ca61644",
+    firstName: "Nathasha",
+    lastName: "Perera",
+    email: "user.nathashaperera@gmail.com",
+    street: "Street 123",
+    city: "Main City",
+    state: "New State",
+    zipcode: 123456,
+    country: "IN",
+    phone: "1234567890",
+
+    },
+  
 ]

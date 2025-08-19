@@ -1,16 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import { assets } from '../assets/assets'
 import { useAppContext } from '../context/AppContext'
 
 const Navbar = () => {
     const [open, setOpen] = React.useState(false)
-    const {user,setUser,setShowUserLogin,navigate} =  useAppContext();
+    const {user,setUser,setShowUserLogin,navigate,setSearchQuery,searchQuery,getCartAmount,getCartCount} =  useAppContext();
 
     const logout=async ()=>{
         setUser(null);
         navigate('/')
     }
+    useEffect(()=>{
+      if(searchQuery.length>0){
+        navigate('/shops')
+      }
+    },[searchQuery])
   return (
     
                <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 bg-[#1B4D3E] text-white relative transition-all shadow-lg">
@@ -22,13 +27,14 @@ const Navbar = () => {
 
             {/* Desktop Menu */}
             <div className="hidden sm:flex items-center gap-8">
-                <NavLink to="#" className="hover:text-[#39FF14] transition-colors duration-200">Home</NavLink>
-                <NavLink to="#" className="hover:text-[#39FF14] transition-colors duration-200">All shops</NavLink>
+                <NavLink to="/" className="hover:text-[#39FF14] transition-colors duration-200">Home</NavLink>
+                <NavLink to="/products" className="hover:text-[#39FF14] transition-colors duration-200">All shops</NavLink>
                 <NavLink to="#" className="hover:text-[#39FF14] transition-colors duration-200">Treasure hunt</NavLink>
                 
                 {/* Search Bar */}
                 <div className="hidden lg:flex items-center text-sm gap-2 bg-white px-3 rounded-full hover:ring-2 hover:ring-[#39FF14] transition-all duration-300">
                     <input 
+                        onChange={(e)=>setSearchQuery(e.target.value)}
                         className="py-1.5 w-full bg-transparent outline-none placeholder-gray-500 text-gray-800" 
                         type="text" 
                         placeholder="Search products" 
@@ -70,13 +76,13 @@ const Navbar = () => {
                             strokeLinejoin="round" 
                         />
                     </svg>
-                    <span className="absolute -top-2 -right-3 text-xs text-white bg-[#39FF14] w-5 h-5 rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-[#1B4D3E] transition-colors duration-300">
-                        3
-                    </span>
+                    <button className="absolute -top-2 -right-3 text-xs text-white bg-[#39FF14] w-5 h-5 rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-[#1B4D3E] transition-colors duration-300">
+                        {getCartCount()}
+                    </button>
              </NavLink>
 
                 {/* Login Button */}
-                {! user ? (<button onClick={()=>setShowUserLogin(ture)} className="
+                {! user ? (<button onClick={()=>setShowUserLogin(true)} className="
                     bg-[#39FF14]
                     text-[#1B4D3E] font-bold 
                     py-2 px-6 rounded-full
@@ -122,6 +128,28 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Menu Button */}
+            <div className='flex items-center gap-6 sm:hidden'>
+                     <NavLink to='/cart' className="relative cursor-pointer group">
+                    <svg 
+                        width="20" 
+                        height="20" 
+                        viewBox="0 0 14 14" 
+                        fill="none" 
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="group-hover:stroke-[#39FF14] transition-colors duration-300"
+                    >
+                        <path 
+                            d="M.583.583h2.333l1.564 7.81a1.17 1.17 0 0 0 1.166.94h5.67a1.17 1.17 0 0 0 1.167-.94l.933-4.893H3.5m2.333 8.75a.583.583 0 1 1-1.167 0 .583.583 0 0 1 1.167 0m6.417 0a.583.583 0 1 1-1.167 0 .583.583 0 0 1 1.167 0" 
+                            stroke="white" 
+                            strokeWidth="1.2"
+                            strokeLinecap="round" 
+                            strokeLinejoin="round" 
+                        />
+                    </svg>
+                    <button className="absolute -top-2 -right-3 text-xs text-white bg-[#39FF14] w-5 h-5 rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-[#1B4D3E] transition-colors duration-300 sm:hidden">
+                        {getCartCount()}
+                    </button>
+             </NavLink> 
             <button 
                 onClick={() => open ? setOpen(false) : setOpen(true)} 
                 aria-label="Menu" 
@@ -133,6 +161,7 @@ const Navbar = () => {
                     <rect x="6" y="13" width="15" height="1.5" rx=".75" fill="currentColor" />
                 </svg>
             </button>
+            </div>
 
             {/* Mobile Menu */}
             {open && (
