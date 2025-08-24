@@ -19,6 +19,13 @@ import logotwo from "../assets/images/waste2taste.png";
 import { Links } from "react-router-dom";
 import loginimage from "../assets/images/loginimage.png";
 import deliveryman from "../assets/images/deliveryman.png";
+import rice_res from "../assets/images/rice_res.jpeg";
+import fruitres from "../assets/images/fruit_res.jpeg";
+import pizzares from "../assets/images/pizza hut.jpeg";
+import vvvv from "../assets/images/res.jpeg";
+import china from "../assets/images/chineese_res.jpeg";
+import cakeres from "../assets/images/cake_res.jpeg";
+import bakery_res from "../assets/images/bakery_res.jpeg";
 
 export const assets={
     logo,
@@ -40,7 +47,11 @@ export const assets={
     bottombanner,
     logotwo,
     loginimage,
-    deliveryman
+    deliveryman,
+    rice_res,
+    pizzares,
+    vvvv,
+    china
 
 
 };
@@ -112,12 +123,12 @@ export const categories =[
 export const dummyProducts =[
     {
         _id:"1",
-        name:"pizza",
-        category:"bakery",
+        name:"Chineese Restuarant",
+        category:"Chineese",
         Quanty:"Suprise Bag",
         offerprice:"500",
         price:"1000",
-        image:[bakery],
+        image:[china],
         description:[
             "",
             "",
@@ -131,12 +142,12 @@ export const dummyProducts =[
     },
      {
         _id:"12",
-        name:"pizza",
+        name:"pizza restuarant",
         category:"pizza",
         Quanty:"Suprise Bag",
         offerprice:"500",
         price:"1000",
-        image:[pizza],
+        image:[pizzares],
         description:[
             "",
             "",
@@ -150,12 +161,12 @@ export const dummyProducts =[
     },
      {
         _id:"123",
-        name:"caraven fresh",
+        name:"Palathuru kade",
         category:"bakery",
         Quanty:"Suprise Bag",
         offerprice:"500",
         price:"1000",
-        image:[burgers],
+        image:[fruitres],
         description:[
             "",
             "",
@@ -169,12 +180,12 @@ export const dummyProducts =[
     },
      {
         _id:"1233",
-        name:"caraven fresh",
+        name:"Little Hut Resturant",
         category:"bakery",
         Quanty:"Suprise Bag",
         offerprice:"500",
         price:"1000",
-        image:[rice],
+        image:[rice_res],
         description:[
             "",
             "",
@@ -193,7 +204,7 @@ export const dummyProducts =[
         Quanty:"Suprise Bag",
         offerprice:"500",
         price:"1000",
-        image:[rice],
+        image:[bakery_res],
         description:[
             "",
             "",
@@ -207,12 +218,12 @@ export const dummyProducts =[
     },
      {
         _id:"12345",
-        name:"caraven fresh",
-        category:"bakery",
+        name:"cakey",
+        category:"cakes",
         Quanty:"Suprise Bag",
         offerprice:"500",
         price:"1000",
-        image:[rice],
+        image:[cakeres],
         description:[
             "",
             "",
@@ -231,7 +242,7 @@ export const dummyProducts =[
         Quanty:"Suprise Bag",
         offerprice:"500",
         price:"1000",
-        image:[rice],
+        image:[bakery_res],
         description:[
             "",
             "",
@@ -250,7 +261,7 @@ export const dummyProducts =[
         Quanty:"Suprise Bag",
         offerprice:"500",
         price:"1000",
-        image:[rice],
+        image:[bakery_res],
         description:[
             "",
             "",
@@ -269,7 +280,7 @@ export const dummyProducts =[
         Quanty:"Suprise Bag",
         offerprice:"500",
         price:"1000",
-        image:[rice],
+        image:[bakery_res],
         description:[
             "",
             "",
@@ -288,7 +299,7 @@ export const dummyProducts =[
         Quanty:"Suprise Bag",
         offerprice:"500",
         price:"1000",
-        image:[rice],
+        image:[bakery_res],
         description:[
             "",
             "",
@@ -307,7 +318,7 @@ export const dummyProducts =[
         Quanty:"Suprise Bag",
         offerprice:"500",
         price:"1000",
-        image:[rice],
+        image:[bakery_res],
         description:[
             "",
             "",
@@ -326,7 +337,7 @@ export const dummyProducts =[
         Quanty:"Suprise Bag",
         offerprice:"500",
         price:"1000",
-        image:[rice],
+        image:[bakery_res],
         description:[
             "",
             "",
@@ -392,3 +403,46 @@ export const dummyAddress=[
     },
   
 ]
+export const dummyOrders = [
+  {
+    _id: "67e2589a8f87e63366786400",
+    userId: "67b5880e4d09769c5ca61644",
+    items: [
+      {
+        product: dummyProducts[3],
+        quantity: 2,
+        _id: "67e2589a8f87e63366786401",
+      },
+    ],
+    amount: 89,
+    address: dummyAddress[0],
+    status: "Order Placed",
+    paymentType: "Online",
+    isPaid: true,
+    createdAt: "2025-03-25T07:17:46.018Z",
+    updatedAt: "2025-03-25T07:18:13.103Z",
+  },
+  {
+    _id: "67e258798f87e633667863f2",
+    userId: "67b5880e4d09769c5ca61644",
+    items: [
+      {
+        product: dummyProducts[0],
+        quantity: 1,
+        _id: "67e258798f87e633667863f3",
+      },
+      {
+        product: dummyProducts[1],
+        quantity: 1,
+        _id: "67e258798f87e633667863f4",
+      },
+    ],
+    amount: 43,
+    address: dummyAddress[0],
+    status: "Order Placed",
+    paymentType: "COD",
+    isPaid: false,
+    createdAt: "2025-03-25T07:17:13.068Z",
+    updatedAt: "2025-03-25T07:17:13.068Z",
+  },
+];

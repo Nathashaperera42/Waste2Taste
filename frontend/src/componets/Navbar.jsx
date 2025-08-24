@@ -13,7 +13,7 @@ const Navbar = () => {
     }
     useEffect(()=>{
       if(searchQuery.length>0){
-        navigate('/shops')
+        navigate('/products')
       }
     },[searchQuery])
   return (
@@ -103,7 +103,7 @@ const Navbar = () => {
   <div className='absolute top-full right-0 pt-2 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-400 delay-500'>
     <ul className='bg-white shadow-lg border border-green-200 py-2 w-40 rounded-md text-sm z-50'>
       <li 
-        onClick={() => navigate('my-orders')} 
+        onClick={() => navigate('/myorders')} 
         className='px-3 py-2 hover:bg-green-50 text-gray-700 hover:text-green-600 cursor-pointer transition-colors flex items-center gap-2'
       >
         <svg className='w-4 h-4 text-green-500' fill="none" stroke="currentColor" viewBox="0 0 24 24">
